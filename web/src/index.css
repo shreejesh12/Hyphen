@@ -1,0 +1,70 @@
+/* ---------- Global reset + light theme ---------- */
+:root {
+  color-scheme: light;
+  --bg: #f8fafc;
+  --panel: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --shadow: 0 1px 0 rgba(15, 23, 42, 0.04);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica,
+    Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/* nicer selection */
+::selection {
+  background: rgba(15, 23, 42, 0.15);
+}
+
+/* anchors */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* buttons/inputs normalize */
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+/* make scrollbars clean (optional) */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 transparent;
+}
+*::-webkit-scrollbar {
+  width: 10px;
+}
+*::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 999px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
